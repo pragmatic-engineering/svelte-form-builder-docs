@@ -43,7 +43,7 @@ export type Sidebar = Record<typeof KNOWN_LANGUAGE_CODES[number], Record<string,
 export const SIDEBAR: Sidebar = {
   en: {
     "Section Header": [
-      { text: "Introduction", link: "en/introduction" },
+      { text: "Introduction", link: "en/docs" },
       { text: "Page 2", link: "en/page-2" },
       { text: "Page 3", link: "en/page-3" },
     ],
