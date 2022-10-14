@@ -1,0 +1,16 @@
+---
+import { Code } from 'astro/components';
+import CopyButton from './CopyButton.svelte'
+
+interface Props {
+  code?: string;
+  hideCopyButton?:boolean
+}
+
+const { code , hideCopyButton} = Astro.props;
+
+---
+
+<CopyButton text={code} {hideCopyButton} client:load>
+    <Code code={code} theme={'slack-dark'} wrap={true} lang="ts" />
+</CopyButton>
