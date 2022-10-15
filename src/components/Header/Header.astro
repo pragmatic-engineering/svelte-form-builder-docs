@@ -6,7 +6,7 @@ import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
 import LanguageSelect from './LanguageSelect';
 import Search from './Search';
-import ThemeToggleButton from '../RightSidebar/ThemeToggleButton';
+import ThemeToggleButton from '../Common/ThemeToggleButton.svelte';
 
 type Props = {
 	currentPage: string;
@@ -22,13 +22,15 @@ const lang = getLanguageFromURL(currentPage);
 		<div class="menu-toggle">
 			<SidebarToggle client:idle />
 		</div>
-
+		
 		<div class="left-aligned">
 			<div class="logo flex">
-				<a href="/en/home">
-					<Logo size={32} />
-					<h1>FormBuilder</h1>
-				</a>
+				<div>
+					<a href="/en/home">
+						<Logo size={32} />
+						<h1>FormBuilder</h1>
+					</a>
+				</div>
 			</div>
 
 			<div class="docs">
@@ -46,12 +48,10 @@ const lang = getLanguageFromURL(currentPage);
 				  </svg>
 				</a>
 			</div>
-			<div class='theme-toggle'>
-				<ThemeToggleButton client:visible />
-			</div>
-			<!-- <div style="flex-grow: 1;"></div> -->
+			<div style="flex-grow: 1;"></div>
 			{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
 			<div class="search-item">
+				<ThemeToggleButton client:load />
 				<Search client:idle />
 			</div>
 		</div>
@@ -83,7 +83,8 @@ const lang = getLanguageFromURL(currentPage);
 		line-height: 1;
 		color: hsla(var(--color-base-white), 100%, 1);
 		gap: 0.25em;
-		z-index: -1;
+		/* z-index: -1; This was causing the top left logo to not be clickable when in mobile mode*/
+		/* z-index: -1; */
 	}
 
 	.logo a {
@@ -162,7 +163,7 @@ const lang = getLanguageFromURL(currentPage);
 		display: none;
 		position: relative;
 		z-index: 10;
-		flex-grow: 1;
+		flex-grow: 2;
 		padding-right: 0.7rem;
 		display: flex;
 		max-width: 200px;
