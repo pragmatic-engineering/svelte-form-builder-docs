@@ -19,7 +19,7 @@ const lang = getLanguageFromURL(currentPage);
 <header>
 	<SkipToContent />
 	<nav class="nav-wrapper" title="Top Navigation">
-		<div class="menu-toggle">
+		<div class={` menu-toggle menu-toggle-${currentPage.endsWith('home') ? 'home':'' } menu-toggle-${currentPage.endsWith('docs') ? 'docs':'' } `}>
 			<SidebarToggle client:idle />
 		</div>
 		
@@ -150,9 +150,9 @@ const lang = getLanguageFromURL(currentPage);
 			display: initial;
 		}
 
-		.menu-toggle {
+		.menu-toggle-docs {
 			display: none;
-		}
+		}	
 	}
 
 	/** Style Algolia */
