@@ -1,0 +1,57 @@
+---
+title: Video
+description: Video Component
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./Video.svelte";
+
+### Generates
+
+A standard HTML Video element
+
+### Example Definition
+
+```ts
+let options: BuilderOptions = {
+  formDefinition: [
+    {
+      tab: {
+        id: "one",
+        tabOrder: 1,
+        label: "One",
+      },
+      rows: [
+        {
+          rowID: 0,
+          fields: [
+            {
+              componentName: "Picture",
+              htmlAttributes: {
+                srcset: "https://interactive-examples.mdn.mozilla.net/media/cc0-images/painted-hand-298-332.jpg",
+                media: "",
+                id: "Picture-Mp8RcKTM",
+                name: "Picture-Mp8RcKTM",
+              },
+              labelAttributes: {
+                label: "Picture",
+              },
+              dataAttributes: [],
+              tooltipAttributes: {
+                text: "",
+                position: "right",
+                size: "large",
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+```
+
+### Demo
+
+<Demo client:load />

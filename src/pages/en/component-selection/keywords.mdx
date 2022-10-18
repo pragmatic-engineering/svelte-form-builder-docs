@@ -1,0 +1,31 @@
+---
+title: Keywords
+description: Keywords
+layout: ../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./keywords.svelte";
+
+Components can searched by their name or Keywords
+
+<img src="/component-selection/keywords.png" />
+
+You can update components Keywords or attach your own to custom components
+
+```ts
+let options: BuilderOptions = {
+  componentOptions: [
+    {
+      componentName: "Text",
+      keywords: ["Hello"],
+    },
+    {
+      componentName: "Audio",
+      keywords: ["Music"],
+    },
+  ],
+};
+```
+
+<Demo client:load />

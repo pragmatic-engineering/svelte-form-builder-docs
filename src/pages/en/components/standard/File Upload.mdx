@@ -1,0 +1,20 @@
+---
+title: File Upload
+description: File Upload Component
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./File Upload.svelte";
+
+### Generates
+
+A standard HTML `<input type="file">` element
+
+### Notes
+
+- Data will be base64 encoded. Try out uploading a file, then going to the Preview tab and using the Serialize tool.
+
+### Demo
+
+<Demo client:load />

@@ -1,0 +1,71 @@
+---
+title: Rich Text
+description: Rich Text Component
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./RichText.svelte";
+
+### Generates
+
+A Rich Text component
+
+### Credits
+
+This component is currently implemented with TinyMCE.
+
+### References
+
+<a href="https://www.tiny.cloud/docs/" target="_blank">
+  TinyMCE
+</a>
+
+<a href="https://www.tiny.cloud/docs/integrations/svelte/" target="_blank">
+  TinyMCE Svelte Integration
+</a>
+
+### Tips & Notes
+
+- By default the TinyMCE JS loads from https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.2.0/tinymce.min.js. Use customAttribute.scriptSrc if you wish to override that.
+
+```ts
+let options: BuilderOptions = {
+  formDefinition: [],
+  componentOptions: [
+    {
+      componentName: "RichText",
+      customAttribute: {
+        scriptSrc: "...custom-tinymce.min.js",
+      },
+    },
+  ],
+};
+```
+
+- Use customAttribute.conf to pass in any of the custom configurations listed in https://www.tiny.cloud/docs/integrations/svelte/
+
+- All event handlers come through customAttribute.customEvents
+
+```ts
+let options: BuilderOptions = {
+  formDefinition: [],
+  componentOptions: [
+    {
+      componentName: "RichText",
+      customAttribute: {
+        conf: {
+          branding: false,
+        },
+        customEvents: {
+          init: (e: Event, editor: Editor) => {},
+        },
+      },
+    },
+  ],
+};
+```
+
+### Demo
+
+<Demo client:load />

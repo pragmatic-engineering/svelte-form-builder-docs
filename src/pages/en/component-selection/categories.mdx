@@ -1,0 +1,27 @@
+---
+title: Categories
+description: Categories
+layout: ../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./categories.svelte";
+
+Components can be grouped into Categories
+
+<img src="/component-selection/categories.png" />
+
+You can override which components belong to which Category or create your own categories
+
+```ts
+let options: BuilderOptions = {
+  componentOptions: [
+    {
+      componentName: "Text",
+      categories: ["Custom Category"],
+    },
+  ],
+};
+```
+
+<Demo client:load />

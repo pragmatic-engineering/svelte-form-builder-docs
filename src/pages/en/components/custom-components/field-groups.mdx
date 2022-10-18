@@ -1,0 +1,57 @@
+---
+title: Field Groups
+description: Field Groups
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./field-groups.svelte";
+
+### Overview
+
+A Field Group is a special component to group a set of fields to be added all at once. You can even group the fields across rows & columns!
+
+1. Create the Svelte file but leave its content empty
+
+   <i> /src/components/ExampleTestCustomComponents/Custom2-Address.svelte</i>
+
+2. Add into componentOptions
+
+```ts
+let options: BuilderOptions = {
+  componentOptions: [
+    {
+      importPath: "/src/components/ExampleTestCustomComponents/Custom2-Address.svelte",
+      componentName: "Address",
+      icon: "✉️",
+      fieldGroup: [
+        {
+          fields: [
+            {
+              componentName: "Text",
+              labelAttributes: { label: "Name" },
+              htmlAttributes: {},
+            },
+          ],
+        },
+        {
+          fields: [{ componentName: "Text", htmlAttributes: {}, labelAttributes: { label: "Address" } }],
+        },
+        {
+          fields: [
+            { componentName: "Text", htmlAttributes: {}, labelAttributes: { label: "City" } },
+            { componentName: "Text", htmlAttributes: {}, labelAttributes: { label: "State" } },
+            {
+              componentName: "Number",
+              htmlAttributes: {},
+              labelAttributes: { label: "Zip Code" },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+```
+
+<Demo client:load />

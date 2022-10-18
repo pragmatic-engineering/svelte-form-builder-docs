@@ -1,0 +1,43 @@
+---
+title: Picture
+description: Picture Component
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./Picture.svelte";
+
+### Generates
+
+A standard HTML Picture element
+
+### Example Definition
+
+```ts
+let options: BuilderOptions = {
+  formDefinition: [
+    {
+      tab: {
+        id: "one",
+        tabOrder: 1,
+        label: "One",
+      },
+      rows: [
+        {
+          rowID: 1,
+          fields: [
+            {
+              componentName: "Audio",
+              htmlAttributes: { src: "https://sveltejs.github.io/assets/music/strauss.mp3" },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+```
+
+### Demo
+
+<Demo client:load />

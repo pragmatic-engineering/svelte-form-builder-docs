@@ -1,0 +1,67 @@
+---
+title: Table
+description: Table Component
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./Table.svelte";
+
+### Generates
+
+A Table component
+
+### Credits
+
+This component is currently implemented with <a href="https://github.com/olifolkerd/tabulator" target="_blank">olifolkerd/tabulator</a>
+
+### Table Configuration
+
+- Can be configured with 9 themes
+- Users can Add Rows
+- Users can Delete Rows
+- Allow CSV Export
+- Confirm Column Deletion
+- Require a minimum # of Rows
+
+### Column Configuration
+
+- Title
+- Internal Name
+- Required
+- Read Only
+- Editor
+
+  - Input
+
+    - Input Formatters
+
+      - Plain Text
+      - HTML
+      - Money
+      - Link
+      - IMage
+      - Color
+      - Row Number
+
+  - Number
+  - Checkbox
+  - Star Rating
+  - Date
+  - List
+
+    - Allows [Choices](../../property-panel/choices)
+    - Can be configured to allow an "Other" value to be entered
+    - Can be configured to allow multiple choices
+
+### Notes
+
+- Columns can be added/deleted using a Menu in the Column Header
+
+<img src="/components/table.gif" />
+
+### Demo
+
+<Demo client:load />
+
+<div style="min-height:600px"></div>

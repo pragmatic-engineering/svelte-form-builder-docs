@@ -1,0 +1,52 @@
+---
+title: Custom Definition Validation
+description: Custom Definition Validation
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./custom-components.svelte";
+
+### Overview
+
+If you would like to perform custom definition validation for your component, add the following method
+
+```ts
+export function validateDefinition(): ValidationResult {}
+```
+
+### Example
+
+```svelte
+<script lang="ts">
+  import { ComponentLabel, convertDataAttributes, GroupSlot } from "svelte-form-builder-pro";
+  import type { ComponentOptions, Field, FormTab, ValidationResult } from "svelte-form-builder-pro/Utils/types";
+  export let componentOptions: ComponentOptions;
+  export let field: Field;
+  export let tab: FormTab;
+
+  export function validateDefinition(): ValidationResult {
+    if (!field.htmlAttributes.class?.includes("form-group")) {
+      return {
+        field,
+        errors: [`(Tab ${tab?.label}) ${field.labelAttributes?.label} must contain a 'form-group' Class`],
+      };
+    }
+  }
+</script>
+
+<GroupSlot>
+  <ComponentLabel field="{field}" />
+
+  <input {...field.htmlAttributes} {...convertDataAttributes(field.dataAttributes)} type="text" bind:value="{field.htmlAttributes.value}" />
+</GroupSlot>
+```
+
+#### Demo
+
+1. Add the Custom Text component
+2. Open the Tools
+3. Click Validate Definition (you should see errors)
+4. Go to the properties and add a 'form-group' class and re-validate (you should see no errors)
+
+<Demo client:load />

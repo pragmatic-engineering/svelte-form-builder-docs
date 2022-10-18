@@ -1,11 +1,14 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { FormBuilder } from "svelte-form-builder-community";
-  import { ThemeMap } from "svelte-form-builder-community/Utils/Misc/Theme";
-  import type { BuilderOptions } from "svelte-form-builder-community/Utils/types";
+  import { FormBuilder } from "svelte-form-builder-pro";
+  import { BuilderAPI } from "svelte-form-builder-pro/lib/API/BuilderAPI";
+  import { ThemeMap } from "svelte-form-builder-pro/Utils/Misc/Theme";
+  import { BuilderOptions, FormComponents, FormComponentsType } from "svelte-form-builder-pro/Utils/types";
   import { theme } from "./store";
 
   export let options: BuilderOptions;
+  export let showComponents: FormComponentsType[] = [];
+  export let setComponentSelectionCategory = "all";
 
   let show = false;
   $: {
@@ -22,11 +25,20 @@
     }
     options.styling.form.emptyFormMinHeight = "20vh";
 
+    options.styling.componentSelection.css = {};
+    options.styling.componentSelection.css.minHeight = "15vh";
+
+    options.styling.propertyPanel.propertyPanelTop = 0;
+
     // options.builderAPIEvents = {
     //   onFormMounted: () => {
     //     show = true;
     //   },
     // };
+    if (showComponents.length) {
+      options.disableComponents = FormComponents.filter((x) => !showComponents.includes(x));
+      BuilderAPI.setComponentSelectionCategory(setComponentSelectionCategory);
+    }
   }
 </script>
 

@@ -42,11 +42,98 @@ export const ALGOLIA = {
 export type Sidebar = Record<typeof KNOWN_LANGUAGE_CODES[number], Record<string, { text: string; link: string }[]>>;
 export const SIDEBAR: Sidebar = {
   en: {
-    "Section Header": [
-      { text: "Introduction", link: "en/docs" },
-      { text: "Page 2", link: "en/page-2" },
-      { text: "Page 3", link: "en/page-3" },
+    Introduction: [
+      { text: "Introduction", link: "en/intro/docs" },
+      { text: "Installation", link: "en/intro/install" },
+      { text: "Terminology", link: "en/intro/terminology" },
     ],
-    "Another Section": [{ text: "Page 4", link: "en/page-4" }],
+    Options: [
+      { text: "Home", link: "en/home" },
+
+      { text: "componentOptions", link: "en/options/componentOptions" },
+      { text: "activeTabOrderValue", link: "en/options/activeTabOrderValue" },
+
+      { text: "disableComponents", link: "en/options/disableComponents" },
+
+      { text: "Form Definition", link: "en/form-definition" },
+
+      { text: "Events", link: "en/events" },
+
+      { text: "Styling", link: "en/styling" },
+    ],
+    "Standard Components": [
+      { text: "Audio", link: "en/components/standard/Audio" },
+      { text: "Button", link: "en/components/standard/Button" },
+      { text: "Canvas", link: "en/components/standard/Canvas" },
+      { text: "Checkbox Group", link: "en/components/standard/Checkbox Group" },
+      { text: "Color", link: "en/components/standard/Color" },
+      { text: "DateTime", link: "en/components/standard/DateTime" },
+      { text: "Date", link: "en/components/standard/Date" },
+      { text: "Divider", link: "en/components/standard/Divider" },
+      { text: "File Upload", link: "en/components/standard/File Upload" },
+      { text: "Header", link: "en/components/standard/Header" },
+      { text: "Hidden", link: "en/components/standard/Hidden" },
+      { text: "Link", link: "en/components/standard/Link" },
+      { text: "Meter", link: "en/components/standard/Meter" },
+      { text: "Month", link: "en/components/standard/Month" },
+      { text: "Number", link: "en/components/standard/Number" },
+      { text: "Paragraph", link: "en/components/standard/Paragraph" },
+      { text: "Password", link: "en/components/standard/Password" },
+      { text: "Picture", link: "en/components/standard/Picture" },
+      { text: "Progress", link: "en/components/standard/Progress" },
+      { text: "Radio Group", link: "en/components/standard/Radio Group" },
+      { text: "Range", link: "en/components/standard/Range" },
+      { text: "Select", link: "en/components/standard/Select" },
+      { text: "Stars", link: "en/components/standard/Stars" },
+      { text: "Text", link: "en/components/standard/Text" },
+      { text: "Text Area", link: "en/components/standard/Text Area" },
+      { text: "Time", link: "en/components/standard/Time" },
+      { text: "Video", link: "en/components/standard/Video" },
+      { text: "Week", link: "en/components/standard/Week" },
+    ],
+    "Pro Components": [
+      { text: "AutoComplete", link: "en/components/pro/AutoComplete" },
+      { text: "Matrix", link: "en/components/pro/Matrix" },
+      { text: "Rich Text", link: "en/components/pro/Rich-Text" },
+      { text: "Signature", link: "en/components/pro/Signature" },
+      { text: "Table", link: "en/components/pro/Table" },
+    ],
+    "Custom Components": [
+      { text: "Custom Components", link: "en/components/custom-components/custom-components" },
+      { text: "Custom Definition Validation", link: "en/components/custom-components/definition-validation" },
+      { text: "Custom Definition Serialization", link: "en/components/custom-components/definition-serialization" },
+      { text: "Custom User Input Validation", link: "en/components/custom-components/user-input-validation" },
+      { text: "Custom User Input Serialization", link: "en/components/custom-components/user-input-serialization" },
+      { text: "Custom Reset", link: "en/components/custom-components/custom-reset" },
+      { text: "Field Groups", link: "en/components/custom-components/field-groups" },
+    ],
+    "Public Settings": [
+      { text: "About", link: "en/tools/public-settings/about" },
+
+      // { text: "Enable Tabs", link: "en/tools/public-settings/show-definition" },
+      // { text: "Confirm Delete Field", link: "en/tools/public-settings/validate-definition" },
+      // { text: "Confirm Delete Tab", link: "en/tools/public-settings/export-definition" },
+      // { text: "Edit On Add", link: "en/tools/public-settings/import-definition" },
+      // { text: "Allow HTML Labels", link: "en/tools/public-settings/clear-current-tab" },
+      // { text: "Show Label Style", link: "en/tools/public-settings/clear-all-tabs" },
+      // { text: "Show Label Max Width", link: "en/tools/public-settings/custom-tools" },
+      // { text: " Disable Drag & Drop Components from the Stage", link: "en/tools/public-settings/custom-tools" },
+      // { text: " Disable Drag & Drop Components from Component Selection", link: "en/tools/public-settings/custom-tools" },
+      // { text: "Disable Drag & Drop Tabs", link: "en/tools/public-settings/custom-tools" },
+    ],
+    "Property Panel": [
+      { text: "Choices", link: "en/property-panel/choices" },
+      { text: "Style", link: "en/property-panel/style" },
+    ],
+    "Component Selection": [
+      { text: "Categories", link: "en/component-selection/categories" },
+      { text: "Filter/Keywords", link: "en/component-selection/keywords" },
+      { text: "Starred", link: "en/component-selection/starred" },
+      { text: "Menu Tools", link: "en/component-selection/menu" },
+    ],
+    Tools: [
+      { text: "Build Tools", link: "en/tools/build-tools" },
+      { text: "Preview Tools", link: "en/tools/preview-tools" },
+    ],
   },
 };

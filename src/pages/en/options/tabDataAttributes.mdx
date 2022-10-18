@@ -1,0 +1,20 @@
+---
+title: Tab Data Attributes
+description: tabDataAttributes
+layout: ../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
+import CodePlus from "../../../components/Common/CodePlus.astro";
+
+<CodePlus
+  hideCopyButton={true}
+  code={`
+import { FormBuilder } from "svelte-form-builder-community";
+<FormBuilder {options} />
+`}
+></CodePlus>
+
+<div style="display:contents">
+  <FormBuilderWrapper options={{}} client:load />
+</div>

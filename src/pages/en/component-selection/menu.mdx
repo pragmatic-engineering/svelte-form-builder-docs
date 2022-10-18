@@ -1,0 +1,68 @@
+---
+title: Menu Tools
+description: Menu Tools
+layout: ../../../layouts/MainLayout.astro
+---
+
+The Component Selection menu has many useful tools
+
+<img src="/component-selection/menu.png" />
+
+###
+
+- Popout tool allows you to unpin Component Selection and move freely
+
+  <svg width="18px" height="18px" fill="purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg" style="cursor: pointer;">
+    <path
+      fill-rule="evenodd"
+      d="M7.364 3.5a.5.5 0 0 1 .5-.5H14.5A1.5 1.5 0 0 1 16 4.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 3 14.5V7.864a.5.5 0 1 1 1 0V14.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H7.864a.5.5 0 0 1-.5-.5z"
+    >
+      {" "}
+    </path>
+    <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 0 1H1.707l8.147 8.146a.5.5 0 0 1-.708.708L1 1.707V5.5a.5.5 0 0 1-1 0v-5z"></path>
+  </svg>
+
+- Pin reverses this
+
+  <svg width="18px" height="18px" fill="purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg" style="cursor: pointer;">
+    <path
+      fill-rule="evenodd"
+      d="M6.364 2.5a.5.5 0 0 1 .5-.5H13.5A1.5 1.5 0 0 1 15 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 2 13.5V6.864a.5.5 0 1 1 1 0V13.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H6.864a.5.5 0 0 1-.5-.5z"
+    ></path>
+    <path fill-rule="evenodd" d="M11 10.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h3.793L1.146 1.854a.5.5 0 1 1 .708-.708L10 9.293V5.5a.5.5 0 0 1 1 0v5z"></path>
+  </svg>
+
+- Minimize shrinks Component Selection to a very small floating & draggable area
+
+  <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg" style="cursor: pointer;">
+    <path
+      fill-rule="evenodd"
+      d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z"
+    ></path>
+  </svg>
+
+- Maximize will restore from Minimize
+
+  <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg" style="cursor: pointer;">
+    <path
+      fill-rule="evenodd"
+      d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"
+    ></path>
+  </svg>
+
+- Shrink will hide component names so only icons are visible
+
+  <svg width="18px" height="18px" fill="purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg" style="cursor: pointer;">
+    <path
+      fill-rule="evenodd"
+      d="M11.854 3.646a.5.5 0 0 1 0 .708L8.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0zM4.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"
+    ></path>
+  </svg>
+
+- Unshrink restores from a Shrink
+  <svg width="18px" height="18px" fill="purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg" style="cursor: pointer;">
+    <path
+      fill-rule="evenodd"
+      d="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z"
+    ></path>
+  </svg>

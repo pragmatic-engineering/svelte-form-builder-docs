@@ -1,0 +1,21 @@
+---
+title: Choices Tab
+description: Property Panel Choices Tab
+layout: ../../../layouts/MainLayout.astro
+---
+
+The Choices tab provides a user interface for adding choices to applicable components.
+
+- Tabbing in the last Value field will generate a new Choice
+- Mass Choices can be generated using the Bulk Add option
+- Choice Label/Values can also be auto-generated for the user using the onAddChoice method
+
+```ts
+let options: BuilderOptions = {
+  builderAPIEvents: {
+    onAddChoice: (choiceParams: onAddChoiceParams, field: Field) => {},
+  },
+};
+```
+
+<img src="/property-panel/choices.gif" />

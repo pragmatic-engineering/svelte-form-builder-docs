@@ -1,0 +1,43 @@
+---
+title: Button
+description: Button Component
+layout: ../../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./Button.svelte";
+
+### Generates
+
+A standard HTML button
+
+### Unique Properties
+
+- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type" target="_blank">
+    Type
+  </a>
+  - Default is button.
+
+### Tips & Notes
+
+- Use the standard events property to handle a click event
+
+```ts
+let options: BuilderOptions = {
+  formDefinition: [],
+  componentOptions: [
+    {
+      componentName: "Button",
+      events: {
+        onclick: (e: Event) => {
+          alert(`Hello from ${e.target.id}`);
+        },
+      },
+    },
+  ],
+};
+```
+
+### Demo
+
+<Demo client:load />
