@@ -1,0 +1,26 @@
+---
+title: Installation
+description: Installation
+layout: ../../../layouts/MainLayout.astro
+---
+
+import CopyButton from "../../../components/Common/CopyButton.svelte";
+
+### Community
+
+<CopyButton text="npm i svelte-form-builder-community" kbd={true} client:load></CopyButton>
+
+```ts
+import { FormBuilder } from "svelte-form-builder-community";
+<FormBuilder {options} />
+```
+
+### Pro
+
+<CopyButton text="npm i svelte-form-builder-pro" kbd={true} client:load></CopyButton>
+
+```ts
+import { FormBuilder } from "svelte-form-builder-pro";
+
+<FormBuilder {options} />
+```

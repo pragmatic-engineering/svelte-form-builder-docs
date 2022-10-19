@@ -1,0 +1,25 @@
+---
+title: Help Tab
+description: Property Panel Help Tab
+layout: ../../../layouts/MainLayout.astro
+---
+
+The Help tab provides a generic way to show Help or Informational Text that goes along with the field
+
+- Supports a custom Position
+- Supports a custom Size
+
+<img src="/property-panel/help.png" />
+
+- If this tab is not applicable to your component, it can be hidden by setting **noTooltipProperties** in the componentOptions
+
+```ts
+let options: BuilderOptions = {
+  componentOptions: [
+    {
+      componentName: "Custom",
+      noTooltipProperties: true,
+    },
+  ],
+};
+```

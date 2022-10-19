@@ -4,17 +4,16 @@ description: view
 layout: ../../../layouts/MainLayout.astro
 ---
 
-import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
-import CodePlus from "../../../components/Common/CodePlus.astro";
+### Property
 
-<CodePlus
-  hideCopyButton={true}
-  code={`
-import { FormBuilder } from "svelte-form-builder-community";
-<FormBuilder {options} />
-`}
-></CodePlus>
+- {frontmatter.description}
 
-<div style="display:contents">
-  <FormBuilderWrapper options={{}} client:load />
-</div>
+### Purpose
+
+- Sets the default View
+
+### Uses
+
+- The **Build** view is where form definition is built
+- The **Preview** view is where you can preview the form but still use some special tools
+- The **Review** view is used to render the form for production use

@@ -4,17 +4,10 @@ description: confirmRemoveField
 layout: ../../../layouts/MainLayout.astro
 ---
 
-import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
-import CodePlus from "../../../components/Common/CodePlus.astro";
+### Property
 
-<CodePlus
-  hideCopyButton={true}
-  code={`
-import { FormBuilder } from "svelte-form-builder-community";
-<FormBuilder {options} />
-`}
-></CodePlus>
+- {frontmatter.description}
 
-<div style="display:contents">
-  <FormBuilderWrapper options={{}} client:load />
-</div>
+### Purpose
+
+- Provide a prompt when user tries to delete a field

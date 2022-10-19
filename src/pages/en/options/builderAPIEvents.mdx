@@ -7,14 +7,27 @@ layout: ../../../layouts/MainLayout.astro
 import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
 import CodePlus from "../../../components/Common/CodePlus.astro";
 
-<CodePlus
-  hideCopyButton={true}
-  code={`
-import { FormBuilder } from "svelte-form-builder-community";
-<FormBuilder {options} />
-`}
-></CodePlus>
+### Property
 
-<div style="display:contents">
-  <FormBuilderWrapper options={{}} client:load />
-</div>
+- {frontmatter.description}
+
+### Purpose
+
+- Subscribe to various events
+
+```ts
+interface BuilderAPIEvents {
+  onComponentAdded?: (field: Field) => any;
+  onComponentDeleted?: (field: Field) => any;
+  onRowDeleted?: (rowIndex: number) => any;
+  onComponentPropertiesOpened?: (field: Field) => any;
+  onComponentPropertiesClosed?: (field: Field) => any;
+  onTabChanged?: (definition: FormDefinition) => any;
+  onTabAdded?: (tab: FormTab) => any;
+  onTabDeleted?: (tab: FormTab) => any;
+  onComponentImported?: (componentImport: ComponentImport) => any;
+  onFormMounted?: (definition: FormDefinition) => any;
+  onViewChanged?: (view: views) => any;
+  onAddChoice?: (params: onAddChoiceParams, field: Field) => any;
+}
+```

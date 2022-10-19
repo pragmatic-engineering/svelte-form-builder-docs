@@ -4,17 +4,27 @@ description: tabDataAttributes
 layout: ../../../layouts/MainLayout.astro
 ---
 
-import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
-import CodePlus from "../../../components/Common/CodePlus.astro";
+### Property
 
-<CodePlus
-  hideCopyButton={true}
-  code={`
-import { FormBuilder } from "svelte-form-builder-community";
-<FormBuilder {options} />
-`}
-></CodePlus>
+- {frontmatter.description}
 
-<div style="display:contents">
-  <FormBuilderWrapper options={{}} client:load />
-</div>
+### Purpose
+
+- Applies attributes to all tabs
+
+```ts
+{
+  tabDataAttributes: [
+    { label: 'Custom 2', name: 'custom2', value: true },
+    {
+      label: 'Special Configuration',
+      name: 'custom9',
+      isButton: true,
+      tab: 'Special',
+      buttonHandler: async (e, dataAttribute) => {
+
+      }
+    }
+  ],
+}
+```

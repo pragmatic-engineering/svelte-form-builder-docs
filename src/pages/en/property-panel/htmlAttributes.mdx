@@ -1,0 +1,36 @@
+---
+title: HTML Attributes
+description: Creating Dynamic Properties with HTMl Attributes
+layout: ../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./htmlAttributes.svelte";
+
+### Dynamic HTML Properties
+
+An important concept is that htmlAttributes can contain any valid HTML property. If used, it will be generated automatically in the Property Panel
+
+```ts
+let options: BuilderOptions = {
+  componentOptions: [
+    {
+      componentName: "Text",
+      htmlAttributes: {
+        required: true,
+        placeholder: "placeholder",
+        class: "",
+        maxlength: null,
+        spellcheck: true,
+      },
+    },
+  ],
+};
+```
+
+### Demo
+
+1. Add a 'Text' field
+2. Open its settings
+
+<Demo client:load />

@@ -9,6 +9,7 @@
   export let options: BuilderOptions;
   export let showComponents: FormComponentsType[] = [];
   export let setComponentSelectionCategory = "all";
+  export let marginTop = "1rem";
 
   let show = false;
   $: {
@@ -25,8 +26,9 @@
     }
     options.styling.form.emptyFormMinHeight = "20vh";
 
-    options.styling.componentSelection.css = {};
+    // options.styling.componentSelection.css = {};
     options.styling.componentSelection.css.minHeight = "15vh";
+    // options.styling.componentSelection.css.maxHeight = "40vh";
 
     options.styling.propertyPanel.propertyPanelTop = 0;
 
@@ -43,5 +45,7 @@
 </script>
 
 {#key options}
-  <FormBuilder options="{options}" />
+  <div style:margin-top="{marginTop}">
+    <FormBuilder options="{options}" />
+  </div>
 {/key}

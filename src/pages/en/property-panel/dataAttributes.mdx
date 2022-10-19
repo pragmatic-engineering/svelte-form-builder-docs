@@ -1,0 +1,62 @@
+---
+title: Data Attributes
+description: Creating Dynamic Properties with Data Attributes
+layout: ../../../layouts/MainLayout.astro
+---
+
+import FormBuilderWrapper from "../../../components/Common/FormBuilderWrapper.svelte";
+import Demo from "./dataAttributes.svelte";
+
+### Dynamic Data Attributes
+
+An important concept is that dataAttributes can add custom Property Tabs for custom attributes and in most cases these properties will be automatically converted to <a href='https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes' target="_blank">data-\* attributes</a> on the HTML element
+
+```ts
+let options: BuilderOptions = {
+  componentOptions: [
+    {
+      componentName: "Text",
+      htmlAttributes: { required: true, placeholder: "placeholder", class: "", maxlength: null, spellcheck: true },
+      dataAttributes: [
+        { label: "Number field", name: "numfield", valueType: "number" },
+
+        { label: "Custom 1", name: "custom1", value: "hi" },
+        { label: "Custom 2", name: "custom2", value: true },
+        { label: "Custom 3", name: "custom3", value: true },
+        { label: "Custom 4", name: "custom4", value: [1, 2, 3] },
+        { label: "Custom 5", name: "custom5", value: { a: "1", b: "2", c: ["a"] } },
+        { name: "HiddenWithoutLabel", value: false },
+        {
+          label: "Custom Options",
+          tab: "Custom Options",
+          name: "custom7",
+          options: [
+            { label: "Red", value: "option-red" },
+            { label: "Green", value: "option-green" },
+            { label: "Blue", value: "option-blue" },
+          ],
+          multiple: true,
+        },
+        { label: "Newly added on component definition", name: "custom8", value: false },
+        {
+          label: "Special Configuration",
+          name: "custom9",
+          isButton: true,
+          tab: "Special",
+          buttonHandler: async (e, dataAttribute) => {
+            alert("hi");
+          },
+        },
+      ],
+    },
+  ],
+};
+```
+
+### Demo
+
+1. Add a 'Text' field
+2. Open its settings
+3. Also observe the HTML element's data-\* attributes using the browser DEV tools
+
+<Demo client:load />
