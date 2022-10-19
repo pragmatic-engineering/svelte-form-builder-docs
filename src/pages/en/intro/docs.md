@@ -6,6 +6,26 @@ layout: ../../../layouts/MainLayout.astro
 
 FormBuilder is a No-Code Form Builder for <a href='https://svelte.dev/' target="_blank">Svelte JS</a>. Out of the box it supports a wide range of Components and provides capability to easily integrate new custom components. The library is fully typed with TypeScript.
 
+## Solutions to fit any need
+
+- Electronic Healthcare
+- Field Operations
+- Payments
+- Quizzes
+- Registrations
+- Surveys
+- Workflow
+
+## Features
+
+- Create, Edit, Preview Forms
+- Export/Import Form Definitions
+- Custom Validations
+- Custom Attributes
+- Themes & Custom Styling
+- Responsive Forms
+- Super easy to extend and plugin your own components
+
 ## Goals
 
 ### Build Faster
