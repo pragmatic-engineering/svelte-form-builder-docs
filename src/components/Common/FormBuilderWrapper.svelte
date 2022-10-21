@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { FormBuilder } from "svelte-form-builder-pro";
-  import { BuilderAPI } from "svelte-form-builder-pro/lib/API/BuilderAPI";
-  import { ThemeMap } from "svelte-form-builder-pro/Utils/Misc/Theme";
-  import { BuilderOptions, FormComponents, FormComponentsType } from "svelte-form-builder-pro/Utils/types";
+  import { FormBuilder } from "@pragmatic-engineering/svelte-form-builder-pro";
+  import { BuilderAPI } from "@pragmatic-engineering/svelte-form-builder-pro/lib/API/BuilderAPI";
+  import { ThemeMap } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/Misc/Theme";
+  import { BuilderOptions, FormComponents, FormComponentsType } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/types";
   import { theme } from "./store";
 
   export let options: BuilderOptions;

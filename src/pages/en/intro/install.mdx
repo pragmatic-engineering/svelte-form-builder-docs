@@ -8,19 +8,42 @@ import CopyButton from "../../../components/Common/CopyButton.svelte";
 
 ### Community
 
-<CopyButton text="npm i svelte-form-builder-community" kbd={true} client:load></CopyButton>
+#### Install
+
+<CopyButton text="npm i @pragmatic-engineering/svelte-form-builder-community" kbd={true} client:load></CopyButton>
+#### Import
 
 ```ts
-import { FormBuilder } from "svelte-form-builder-community";
+import { FormBuilder } from "@pragmatic-engineering/svelte-form-builder-community";
 <FormBuilder {options} />
+
 ```
 
 ### Pro
 
-<CopyButton text="npm i svelte-form-builder-pro" kbd={true} client:load></CopyButton>
+Become a sponsor to <b>Svelte Form Builder</b>
+
+Currently, Svelte Form Builder is a team of 1, funded by the GitHub sponsors community.
+
+🙏 If you use use this library, sponsorship would mean A WHOLE LOT to allow continued development into the project and community surrounding it 💗.
+
+GitHub Sponsorship will automatically provide access to the private repo & package.
+
+#### .npmrc
+
+```
+@pragmatic-engineering:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:\_authToken=${GITHUB_TOKEN}
+```
+
+#### Install
+
+<CopyButton text="npm i @pragmatic-engineering/svelte-form-builder-pro" kbd={true} client:load></CopyButton>
+
+#### Import
 
 ```ts
-import { FormBuilder } from "svelte-form-builder-pro";
+import { FormBuilder } from "@pragmatic-engineering/svelte-form-builder-pro";
 
 <FormBuilder {options} />
 ```

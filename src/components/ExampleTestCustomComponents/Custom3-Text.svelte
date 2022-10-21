@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { ComponentLabel, convertDataAttributes, GroupSlot } from "svelte-form-builder-pro";
-  import type { ComponentOptions, Field, FormTab, ValidationResult } from "svelte-form-builder-pro/Utils/types";
+  import { ComponentLabel, convertDataAttributes, GroupSlot } from "@pragmatic-engineering/svelte-form-builder-pro";
+  import type { ComponentOptions, Field, FormTab, ValidationResult } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/types";
   export let componentOptions: ComponentOptions;
   export let field: Field;
   export let tab: FormTab;

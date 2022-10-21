@@ -13,11 +13,13 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
+    "@astrojs/mdx": "^0.11.4",
     "@astrojs/preact": "^1.2.0",
     "@astrojs/react": "^1.2.0",
     "@astrojs/svelte": "^1.0.1",
     "@docsearch/css": "^3.1.0",
     "@docsearch/react": "^3.1.0",
+    "@pragmatic-engineering/svelte-form-builder-pro": "^0.0.2-rc.0",
     "@types/node": "^18.0.0",
     "@types/react": "^17.0.45",
     "@types/react-dom": "^18.0.0",
@@ -26,8 +28,6 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "svelte": "^3.51.0",
-    "svelte-form-builder-community": "file:../../jojoshua-forks/svelte-form-builder-community/package",
-    "svelte-form-builder-pro": "^0.0.6",
     "tippy.js": "^6.3.7"
   }
 }
