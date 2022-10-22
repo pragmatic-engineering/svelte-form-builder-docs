@@ -44,9 +44,25 @@
     }
   }
 
-  // if (!options.componentOption) {
-  //   options.componentOptions = [];
-  // }
+  if (!options.componentOption) {
+    options.componentOptions = [
+      {
+        componentName: "RichText",
+        customAttribute: {
+          // scriptSrc: "https://cdn.jsdelivr.net/npm/tinymce@6.2.0/tinymce.min.js",
+          conf: {
+            branding: false,
+          },
+        },
+        customEvents: {
+          init: (e: Event, editor: Editor) => {
+            document.querySelector(".tox-promotion")?.remove();
+          },
+        },
+      },
+    ];
+  }
+
   // if (options.componentOptions) {
   //   options.componentOptions.push({
   //     customImport: import("../../components/ExampleTestCustomComponents/Custom3-Text.svelte"),
