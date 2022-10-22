@@ -14,9 +14,7 @@
           },
         },
         customEvents: {
-          init: (e: Event, editor) => {
-            document.querySelector(".tox-promotion")?.remove();
-          },
+          init: (e: Event, editor) => {},
         },
       },
     ],
