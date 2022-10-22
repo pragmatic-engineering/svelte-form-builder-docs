@@ -23,6 +23,6 @@
 
 <GroupSlot>
   <ComponentLabel field="{field}" />
-
+  Custom Text
   <input {...field.htmlAttributes} {...convertDataAttributes(field.dataAttributes)} type="text" bind:value="{field.htmlAttributes.value}" />
 </GroupSlot>

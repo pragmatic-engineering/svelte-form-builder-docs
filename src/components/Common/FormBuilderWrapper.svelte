@@ -10,6 +10,7 @@
   export let showComponents: FormComponentsType[] = [];
   export let setComponentSelectionCategory = "all";
   export let marginTop = "1rem";
+  import("tabulator-tables/dist/css/tabulator.min.css");
 
   let show = false;
   $: {
@@ -42,6 +43,17 @@
       BuilderAPI.setComponentSelectionCategory(setComponentSelectionCategory);
     }
   }
+
+  // if (!options.componentOption) {
+  //   options.componentOptions = [];
+  // }
+  // if (options.componentOptions) {
+  //   options.componentOptions.push({
+  //     customImport: import("../../components/ExampleTestCustomComponents/Custom3-Text.svelte"),
+  //     componentName: "Text",
+  //     htmlAttributes: { class: "" },
+  //   });
+  // }
 </script>
 
 {#key options}

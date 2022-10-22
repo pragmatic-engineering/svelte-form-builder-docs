@@ -5,7 +5,7 @@
   let options: BuilderOptions = {
     componentOptions: [
       {
-        importPath: "/src/components/ExampleTestCustomComponents/Custom2-Address.svelte",
+        customImport: import("../../../../components/ExampleTestCustomComponents/Custom2-Address.svelte"),
         componentName: "Address",
         icon: "✉️",
         fieldGroup: [
