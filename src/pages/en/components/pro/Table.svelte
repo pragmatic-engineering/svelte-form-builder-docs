@@ -51,50 +51,6 @@
                 },
                 dataAttributes: [
                   {
-                    label: "Theme",
-                    tab: "Table",
-                    name: "theme",
-                    value: "tabulator_site.min.css",
-                    options: [
-                      {
-                        label: "Default",
-                        value: "tabulator.min.css",
-                      },
-                      {
-                        label: "Simple",
-                        value: "tabulator_simple.min.css",
-                      },
-                      {
-                        label: "Midnight",
-                        value: "tabulator_midnight.min.css",
-                      },
-                      {
-                        label: "Tabulator",
-                        value: "tabulator_site.min.css",
-                      },
-                      {
-                        label: "Bootstrap 3",
-                        value: "tabulator_bootstrap3.min.css",
-                      },
-                      {
-                        label: "Bootstrap 4",
-                        value: "tabulator_bootstrap4.min.css",
-                      },
-                      {
-                        label: "Bootstrap 5",
-                        value: "tabulator_bootstrap5.min.css",
-                      },
-                      {
-                        label: "Bulma",
-                        value: "tabulator_bulma.min.css",
-                      },
-                      {
-                        label: "Materialize",
-                        value: "tabulator_materialize.min.css",
-                      },
-                    ],
-                  },
-                  {
                     label: "Confirm Column Deletion",
                     tab: "Table",
                     name: "confirmDeleteColumn",
