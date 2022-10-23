@@ -122,4 +122,8 @@
     gap: 15px;
     align-items: center;
   }
+
+  svg {
+    max-width: unset !important;
+  }
 </style>

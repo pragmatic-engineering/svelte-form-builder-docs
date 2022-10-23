@@ -67,7 +67,6 @@ export const SIDEBAR: Sidebar = {
       { text: "disabledRenderTools", link: "en/options/disabledRenderTools" },
       { text: "disabledViews", link: "en/options/disabledViews" },
       { text: "editOnAdd", link: "en/options/editOnAdd" },
-      { text: "enableTabs copy", link: "en/options/enableTabs copy" },
       { text: "enableTabs", link: "en/options/enableTabs" },
       { text: "formDefinition", link: "en/options/formDefinition" },
       { text: "showLabelMaxWidth", link: "en/options/showLabelMaxWidth" },
@@ -144,5 +143,6 @@ export const SIDEBAR: Sidebar = {
       { text: "Build Tools", link: "en/tools/build-tools" },
       { text: "Preview Tools", link: "en/tools/preview-tools" },
     ],
+    "": [],
   },
 };

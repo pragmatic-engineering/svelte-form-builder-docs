@@ -3,6 +3,10 @@
 	margin: 0;
 }
 
+*{
+	max-width: 100% !important;
+}
+
 /* Global focus outline reset */
 *:focus:not(:focus-visible) {
 	outline: none;
@@ -226,7 +230,9 @@ pre {
 	font-size: 0.85em;
 	overflow-y: hidden;
 	overflow-x: auto;
+	max-width: unset !important;
 }
+
 
 table {
 	width: 100%;

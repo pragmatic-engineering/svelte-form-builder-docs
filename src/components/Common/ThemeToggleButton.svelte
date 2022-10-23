@@ -82,4 +82,8 @@
   button:hover {
     background-color: var(--theme-bg-hover);
   }
+
+  svg {
+    max-width: unset !important;
+  }
 </style>

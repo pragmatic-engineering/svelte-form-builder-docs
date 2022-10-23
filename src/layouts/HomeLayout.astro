@@ -58,16 +58,16 @@ import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 				text-align: center;
 			}
 			.buttons_pzbO{
-				margin-top: 25px;
+				/* margin-top: 25px; */
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				gap: 3rem;	
+				/* gap: 3rem;	 */
 				margin: 7px;			
 			}
 		
 			.get-started {
-				margin-left: 15px;
+				/* margin-left: 15px; */
 				border: 2px solid #45ba4b;
 				border-radius: 8px;
 				color: #fff;
@@ -115,18 +115,21 @@ import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 					display: block;
 					top: 4rem;
 				}
-			}			
+			}
 		</style>
 	</head>
 
-	<body>
-		<Header currentPage={currentPage} />
 
-			<div class="center">
-				<h1 class='heading'>Build forms faster.</h1>
-			</div>
 
-<header class="hero hero--primary heroBanner_UJJx">
+<body>	
+	<Header currentPage={currentPage} />
+	
+	
+	<div class="center">
+		<h1 class='heading'>Build forms faster.</h1>
+	</div>
+
+<header class="hero hero--primary heroBanner_UJJx" >
 	<div class="container">
 		<div class="center">
 			<h2 class="subheading">The <span class="highlight">No-Code Form Builder</span> for Svelte JS</h2>
@@ -134,19 +137,20 @@ import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 		<div class="buttons_pzbO">
 					
 			<a class="get-started" href="/en/intro/docs">Get started</a>
-				<CopyButton text="npm i @pragmatic-engineering/svelte-form-builder-community" kbd={true} client:load></CopyButton>
+				<!-- <CopyButton text="npm i @pragmatic-engineering/svelte-form-builder-community" kbd={true} client:load></CopyButton> -->
 			</div>
 
-			<div style="text-align: center">
-
-<CodePlus hideCopyButton={true} code={`
-import { FormBuilder } from "@pragmatic-engineering/svelte-form-builder-community";
-<FormBuilder {options} />
-`}>
-</CodePlus>
+			
+		</div>
+		<!-- <div style="text-align: center">
+		<CodePlus hideCopyButton={true} code={`
+		import { FormBuilder } from "@pragmatic-engineering/svelte-form-builder-community";
+		<FormBuilder {options} />
+		`}>
+		</CodePlus> -->
+	</header>
+	
 </div>
-	</div>
-</header>
 
 <div style="display:contents">
 	<FormBuilderWrapper options={{}} marginTop={'2.5rem'} client:load />
