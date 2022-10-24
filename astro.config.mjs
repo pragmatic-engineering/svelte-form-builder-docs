@@ -31,5 +31,5 @@ export default defineConfig({
       wrap: true,
     },
   },
-  site: `https://svelte-form-builder-docs.vercel.app/en/home`,
+  site: `http://astro.build`,
 });
