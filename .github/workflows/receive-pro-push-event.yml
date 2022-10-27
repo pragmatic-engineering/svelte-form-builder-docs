@@ -1,0 +1,23 @@
+name: Receive Pro Publish Event
+
+env:
+  PA_TOKEN: ${{ secrets.AUTOMERGE }}
+
+on:
+  repository_dispatch:
+    types: pro-push
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone and merge
+        run: |
+          git clone https://pragmatic-engineering:${{ secrets.AUTOMERGE }}@github.com/pragmatic-engineering/svelte-form-builder-docs.git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -allow-empty -m "New svelte-form-builder-pro release"
+          git push
