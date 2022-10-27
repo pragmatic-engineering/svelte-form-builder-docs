@@ -20,5 +20,5 @@ jobs:
           cd svelte-form-builder-docs
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -allow-empty -m "New svelte-form-builder-pro release"
+          git commit --allow-empty -m "New svelte-form-builder-pro release"
           git push
