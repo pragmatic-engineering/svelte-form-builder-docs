@@ -17,7 +17,7 @@ Creating a Custom Component is easy. Let's walk through some simple examples.
 
 ```ts
 <script lang="ts">
-  import type { ComponentOptions, Field, FormTab } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/types";
+  import type { ComponentOptions, Field, FormTab } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/types";
   export let componentOptions: ComponentOptions;
   export let field: Field;
   export let tab: FormTab;
@@ -38,8 +38,8 @@ Creating a Custom Component is easy. Let's walk through some simple examples.
 
 ```svelte
 <script lang="ts">
-  import { ComponentLabel, convertDataAttributes, GroupSlot } from "@pragmatic-engineering/svelte-form-builder-pro";
-  import type { ComponentOptions, Field, FormTab, ValidationResult } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/types";
+  import { ComponentLabel, convertDataAttributes, GroupSlot } from "@pragmatic-engineering/svelte-form-builder-[flavor]";
+  import type { ComponentOptions, Field, FormTab, ValidationResult } from "@pragmatic-engineering/svelte-form-builder-[flavor]/Utils/types";
   export let componentOptions: ComponentOptions;
   export let field: Field;
   export let tab: FormTab;

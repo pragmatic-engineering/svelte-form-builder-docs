@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { DefinitionManager, FormBuilder } from "@pragmatic-engineering/svelte-form-builder-pro";
-  import { BuilderAPI } from "@pragmatic-engineering/svelte-form-builder-pro/lib/API/BuilderAPI";
-  import { ThemeMap } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/Misc/Theme";
+  import { DefinitionManager, FormBuilder } from "@pragmatic-engineering/svelte-form-builder-enterprise";
+  import { BuilderAPI } from "@pragmatic-engineering/svelte-form-builder-enterprise/lib/API/BuilderAPI";
+  import { ThemeMap } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/Misc/Theme";
   import {
     BuilderOptions,
     ChoiceElement,
@@ -13,7 +13,7 @@
     FormTab,
     onAddChoiceParams,
     views,
-  } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/types";
+  } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/types";
   import { theme } from "./store";
   import { capitalizeFirstLetter } from "../../Utils";
 

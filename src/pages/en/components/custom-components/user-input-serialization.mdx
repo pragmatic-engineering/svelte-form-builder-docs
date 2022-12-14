@@ -9,8 +9,8 @@ import Demo from "./custom-components.svelte";
 
 ### Overview
 
-If you would like to perform custom serialization for your component, add the following method
+Custom components don't or cant always bind to the htmlAttribute.value property. In order to get the user data (the data the user fills out), these components can implement a customGetUserData() method which will return its data.
 
 ```ts
-export function customUserInputSerialization() {}
+export function customGetUserData() {}
 ```

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ComponentOptions, Field, FormTab } from "@pragmatic-engineering/svelte-form-builder-pro/Utils/types";
+  import type { ComponentOptions, Field, FormTab } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/types";
   export let componentOptions: ComponentOptions;
   export let field: Field;
   export let tab: FormTab;

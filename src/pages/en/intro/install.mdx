@@ -6,7 +6,7 @@ layout: ../../../layouts/MainLayout.astro
 
 import CopyButton from "../../../components/Common/CopyButton.svelte";
 
-### Community
+### Community Tier
 
 #### Install
 
@@ -19,7 +19,7 @@ import { FormBuilder } from "@pragmatic-engineering/svelte-form-builder-communit
 
 ```
 
-### Pro
+### Sponsored Tiers
 
 Become a sponsor to <b>Svelte Form Builder</b>
 
@@ -29,21 +29,24 @@ Currently, Svelte Form Builder is a team of 1, funded by the GitHub sponsors com
 
 GitHub Sponsorship will automatically provide access to the private repo & package.
 
-#### .npmrc
+Just pull from the @pragmatic-engineering scope from Github in your .npmrc
 
 ```
 @pragmatic-engineering:registry=https://npm.pkg.github.com/
 //npm.pkg.github.com/:\_authToken=${GITHUB_TOKEN}
 ```
 
-#### Install
+### Pro
 
-<CopyButton text="npm i @pragmatic-engineering/svelte-form-builder-pro" kbd={true} client:load></CopyButton>
+Provides access to the following premium Components:
 
-#### Import
+- [AutoComplete](../components/pro/AutoComplete)
+- [Matrix](../components/pro/Matrix)
+- [RichText](../components/pro/Rich-Text)
+- [Signature](../components/pro/Signature)
+- [Table](../components/pro/Table)
 
-```ts
-import { FormBuilder } from "@pragmatic-engineering/svelte-form-builder-pro";
+### Enterprise
 
-<FormBuilder {options} />
-```
+- Provides access to everything in the Pro Tier
+- Includes Condition Management
