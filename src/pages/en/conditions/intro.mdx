@@ -1,0 +1,21 @@
+---
+title: Conditions
+description: Conditions Management
+layout: ../../../layouts/MainLayout.astro
+---
+
+Conditions is an [Enterprise](../intro/install) feature.
+
+Form conditions allow users to conditionally do many actions. Conditions are governed by terms.
+
+## Terms
+
+Terms define whether or not the following action(s) are evaluated. Terms always have an IF clause associated to a form field. The STATE defines the state that field's value or status should be. You may define multiple Terms together and pair it with one more field of how you want the terms to work together, either define ALL the terms must be fulfilled or ANY of the terms should be fulfilled.
+
+## Actions
+
+Once the Terms are met, then the actions kick in. Actions can do things like hide or show other fields. This can then work in tandem with other Conditions to chain complex behaviors as needed.
+
+### Conflicting Actions
+
+Note that actions that have direct opposites such as Hide/Show on the same field are considered conflicting. This is rare but can be resolved via whichever Condition has highest priority.
