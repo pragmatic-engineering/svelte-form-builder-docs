@@ -180,6 +180,7 @@ export const SIDEBAR: Sidebar = {
       { text: "GPL-3.0", link: "en/license/gpl3" },
       { text: "Standard EULA", link: "en/license/standard" },
       { text: "Royalty-free EULA", link: "en/license/royalty-free" },
+      { text: "Third Party Notices", link: "en/license/notices" },
     ],
 
     "": [],
