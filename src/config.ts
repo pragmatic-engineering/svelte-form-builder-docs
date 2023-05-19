@@ -176,6 +176,11 @@ export const SIDEBAR: Sidebar = {
       { text: "Copy", link: "en/conditions/actions/copy" },
       { text: "Calculation", link: "en/conditions/actions/calculation" },
     ],
+    Licensing: [
+      { text: "GPL-3.0", link: "en/license/gpl3" },
+      { text: "Standard EULA", link: "en/license/standard" },
+      { text: "Royalty-free EULA", link: "en/license/royalty-free" },
+    ],
 
     "": [],
   },
