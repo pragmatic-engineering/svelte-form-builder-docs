@@ -178,8 +178,7 @@ export const SIDEBAR: Sidebar = {
     ],
     Licensing: [
       { text: "GPL-3.0", link: "en/license/gpl3" },
-      { text: "Standard EULA", link: "en/license/standard" },
-      { text: "Royalty-free EULA", link: "en/license/royalty-free" },
+      { text: "Commercial", link: "en/license/commercial" },
       { text: "Third Party Notices", link: "en/license/notices" },
     ],
 
