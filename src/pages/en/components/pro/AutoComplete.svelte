@@ -1,5 +1,10 @@
 <script lang="ts">
-  import type { BuilderOptions } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/types";
+  import type {
+    BuilderOptions_ as BuilderOptions,
+    onAddChoiceParams_ as onAddChoiceParams,
+    Field_ as Field,
+    ChoiceElement_ as ChoiceElement,
+  } from "@pragmatic-engineering/svelte-form-builder-enterprise";
   import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
   import { capitalizeFirstLetter } from "../../../../Utils";
 
