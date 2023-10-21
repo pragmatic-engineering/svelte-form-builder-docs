@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { BuilderOptions } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/types";
+  import type { BuilderOptions_ as BuilderOptions } from "@pragmatic-engineering/svelte-form-builder-enterprise";
   import FormBuilderWrapper from "../../../../components/Common/FormBuilderWrapper.svelte";
 
   let options: BuilderOptions = {

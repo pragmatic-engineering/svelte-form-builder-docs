@@ -13,21 +13,24 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
-    "@astrojs/mdx": "^0.11.4",
-    "@astrojs/preact": "^1.2.0",
-    "@astrojs/react": "^1.2.0",
-    "@astrojs/svelte": "^1.0.1",
+    "@astrojs/mdx": "^1.1.2",
+    "@astrojs/preact": "^3.0.1",
+    "@astrojs/react": "^3.0.3",
+    "@astrojs/svelte": "^4.0.3",
     "@docsearch/css": "^3.1.0",
     "@docsearch/react": "^3.1.0",
-    "@pragmatic-engineering/svelte-form-builder-enterprise": "^1.0.1",
+    "@pragmatic-engineering/svelte-form-builder-enterprise": "1.0.19",
     "@types/node": "^18.0.0",
     "@types/react": "^17.0.45",
     "@types/react-dom": "^18.0.0",
-    "astro": "^1.4.7",
+    "astro": "^3.3.2",
     "preact": "^10.7.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "svelte": "^3.51.0",
+    "svelte": "^4.2.2",
     "tippy.js": "^6.3.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
   }
 }
