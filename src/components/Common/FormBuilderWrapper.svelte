@@ -1,19 +1,20 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { DefinitionManager, FormBuilder } from "@pragmatic-engineering/svelte-form-builder-enterprise";
-  import { BuilderAPI } from "@pragmatic-engineering/svelte-form-builder-enterprise/lib/API/BuilderAPI";
-  import { ThemeMap } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/Misc/Theme";
   import {
-    BuilderOptions,
-    ChoiceElement,
-    Field,
+    DefinitionManager,
+    FormBuilder,
+    ThemeMap,
+    type BuilderOptions_ as BuilderOptions,
+    type FormComponentsType_ as FormComponentsType,
     FormComponents,
-    FormComponentsType,
-    FormDefinition,
-    FormTab,
-    onAddChoiceParams,
-    views,
-  } from "@pragmatic-engineering/svelte-form-builder-enterprise/Utils/types";
+    type ChoiceElement_ as ChoiceElement,
+    type Field_ as Field,
+    type FormDefinition_ as FormDefinition,
+    type FormTab_ as FormTab,
+    type views_ as views,
+    type onAddChoiceParams_ as onAddChoiceParams,
+  } from "@pragmatic-engineering/svelte-form-builder-enterprise";
+  import { BuilderAPI } from "@pragmatic-engineering/svelte-form-builder-enterprise";
   import { theme } from "./store";
   import { capitalizeFirstLetter } from "../../Utils";
 
@@ -159,10 +160,11 @@
   //   });
   // }
   let showWarning = false;
-  let dontShowWarning = localStorage.getItem("dontShowAgain");
+  let dontShowWarning = typeof window !== "undefined" ? window.localStorage.getItem("dontShowAgain") : false;
+  let isMobile = typeof window !== "undefined" ? window.localStorage.getItem("isMobile") : false;
 </script>
 
-{#if localStorage.getItem("isMobile") === "true" && dontShowWarning !== "true"}
+{#if isMobile === "true" && dontShowWarning !== "true"}
   <h5 style="text-align:center">
     <div style="color:orange;" on:click="{() => (showWarning = !showWarning)}">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
